@@ -3,7 +3,6 @@ import base64
 import json
 import re
 from datetime import datetime, timezone, timedelta
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import unquote
 
 SOURCES = [
@@ -31,30 +30,57 @@ def decode_vmess(link):
         link = link.strip()
         if not link.startswith("vmess://"):
             return None
+
         encoded = link[8:]
+        decoded_str = base64.b64decode(encoded + "==").decode("utf-8", errors="ignore")
+        decoded_str = decoded_str.strip()
+
         try:
-            decoded = base64.b64decode(encoded + "==").decode("utf-8", errors="ignore")
-            json_str = decoded.strip()
-            try:
-                data = json.loads(json_str)
-            except:
-                data = json.loads(base64.b64decode(json_str + "==").decode("utf-8"))
+            data = json.loads(decoded_str)
         except:
-            return None
+            try:
+                data = json.loads(base64.b64decode(decoded_str + "==").decode("utf-8"))
+            except:
+                return None
 
         host = data.get("add", "") or data.get("address", "")
         port = int(data.get("port", 0))
+        uuid = data.get("id", "") or data.get("uuid", "")
         name = data.get("ps", "") or data.get("remark", "")
+        net = data.get("net", "tcp")
+        path = data.get("path", "/")
+        tls = data.get("tls", "")
+        aid = data.get("aid", "0")
+        scy = data.get("scy", "auto")
 
-        if not host or not port:
+        if not host or not port or not uuid:
             return None
+
+        params = []
+        if net and net != "tcp":
+            params.append(f"network={net}")
+        if path and path != "/":
+            params.append(f"path={path}")
+        if tls:
+            params.append(f"tls={tls}")
+        if aid and aid != "0":
+            params.append(f"aid={aid}")
+        if scy and scy != "auto":
+            params.append(f"scy={scy}")
+
+        param_str = "&".join(params)
+        result_link = f"vmess://{uuid}@{host}:{port}"
+        if param_str:
+            result_link += "?" + param_str
+        if name:
+            result_link += "#" + unquote(name) if isinstance(name, str) and "%" in name else f"#{name}"
 
         return {
             "type": "vmess",
             "host": host,
             "port": port,
             "name": name or "VMess",
-            "raw": link
+            "raw": result_link
         }
     except:
         return None

@@ -12,5 +12,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Test
-        run: echo "Minimal workflow test"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Create and run Python script
+        run: |
+          python3 << 'PYEOF'
+print("Hello from Python!")
+PYEOF
+
+      - name: Commit test
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git diff --staged --quiet || git commit -m "Test commit"
+          git push

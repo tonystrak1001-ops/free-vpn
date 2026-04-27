@@ -5,11 +5,14 @@ on:
     - cron: '0 */4 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update-nodes:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -17,5 +20,16 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Test Python
-        run: python -c "print('Hello from Python')"
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run scanner
+        run: python -c 'import requests`nimport base64`nimport json`nimport socket`nimport time`nfrom datetime import datetime, timezone, timedelta`nfrom concurrent.futures import ThreadPoolExecutor, as_completed`n`nSOURCES = [`n    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",`n    "https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray",`n    "https://raw.githubusercontent.com/sharkDoor/vpn-free-nodes/main/v2ray.txt",`n    "https://raw.githubusercontent.com/mermeroo/V2RAY-CLASH-BASE64-Subscription.Links/main/V2Ray_Base64",`n    "https://raw.githubusercontent.com/xiaoji235/airport-free/main/v2ray",`n]`n`nTCP_TIMEOUT = 5`nMAX_WORKERS = 20`n`ndef tcping(host, port):`n    try:`n        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)`n        sock.settimeout(TCP_TIMEOUT)`n        start = time.time()`n        sock.connect((host, int(port)))`n        latency = round((time.time() - start) * 1000)`n        sock.close()`n        return True, latency`n    except Exception:`n        return False, 0`n`ndef parse_ss(link):`n    try:`n        link = link.replace("ss://", "")`n        if "#" in link:`n            main_part, name = link.rsplit("#", 1)`n        else:`n            main_part = link`n            name = ""`n        if "@" in main_part:`n            encoded, server_part = main_part.split("@", 1)`n            try:`n                decoded = base64.b64decode(encoded + "==").decode("utf-8", errors="ignore")`n                method, password = decoded.split(":", 1)`n            except Exception:`n                method, password = "", ""`n            host_port = server_part.split(":")`n            if len(host_port) >= 2:`n                host = host_port[0]`n                port = host_port[1]`n                return {"type": "ss", "host": host, "port": int(port), "name": name, "raw": "ss://" + link}`n        else:`n            try:`n                decoded = base64.b64decode(main_part + "==").decode("utf-8", errors="ignore")`n                data = json.loads(decoded)`n                return {"type": "ss", "host": data.get("add", ""), "port": int(data.get("port", 0)), "name": data.get("ps", name), "raw": "ss://" + link}`n            except Exception:`n                pass`n    except Exception:`n        pass`n    return None`n`ndef parse_vmess(link):`n    try:`n        link = link.replace("vmess://", "")`n        decoded = base64.b64decode(link + "==").decode("utf-8", errors="ignore")`n        data = json.loads(decoded)`n        return {"type": "vmess", "host": data.get("add", ""), "port": int(data.get("port", 0)), "name": data.get("ps", ""), "raw": "vmess://" + link}`n    except Exception:`n        return None`n`ndef parse_node(line):`n    line = line.strip()`n    if not line:`n        return None`n    if line.startswith("ss://"):`n        return parse_ss(line)`n    elif line.startswith("vmess://"):`n        return parse_vmess(line)`n    return None`n`ndef fetch_source(url):`n    nodes = []`n    try:`n        resp = requests.get(url, timeout=30)`n        if resp.status_code != 200:`n            return nodes`n        content = resp.text.strip()`n        try:`n            decoded = base64.b64decode(content + "==").decode("utf-8", errors="ignore")`n            content = decoded`n        except Exception:`n            pass`n        for line in content.split("\n"):`n            node = parse_node(line)`n            if node and node["host"] and node["port"]:`n                nodes.append(node)`n    except Exception:`n        pass`n    return nodes`n`ndef test_node(node):`n    alive, latency = tcping(node["host"], node["port"])`n    node["alive"] = alive`n    node["latency"] = latency`n    return node`n`ndef generate_readme(nodes_by_type, total_alive, total_fetched):`n    moscow_tz = timezone(timedelta(hours=3))`n    now = datetime.now(moscow_tz).strftime("%d.%m.%Y %H:%M 袦小袣")`n`n    readme = "# 袘械褋锌谢邪褌薪褘械 VPN 褍蟹谢褘\n\n"`n    readme += f"袨斜薪芯胁谢械薪芯: {now}\n"`n    readme += f"袙褋械谐芯 锌褉芯胁械褉械薪芯: {total_fetched}, 袪邪斜芯褔懈褏: {total_alive}\n\n"`n`n    for proto, nodes in nodes_by_type.items():`n        readme += f"## {proto.upper()} ({len(nodes)})\n\n"`n        for node in nodes:`n            readme += f"{node[''raw'']}\n"`n        readme += "\n"`n`n    return readme`n`nprint("=== Scanning nodes ===")`nall_nodes = []`nseen = set()`n`nfor url in SOURCES:`n    print(f"Fetching: {url}")`n    nodes = fetch_source(url)`n    print(f"  Found: {len(nodes)}")`n    for node in nodes:`n        key = f"{node[''type'']}:{node[''host'']}:{node[''port'']}"`n        if key not in seen:`n            seen.add(key)`n            all_nodes.append(node)`n`ntotal_fetched = len(all_nodes)`nprint(f"Total unique: {total_fetched}")`n`nprint("Testing connectivity...")`nwith ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:`n    futures = {executor.submit(test_node, node): node for node in all_nodes}`n    for future in as_completed(futures):`n        pass`n`nalive_nodes = [n for n in all_nodes if n.get("alive")]`ntotal_alive = len(alive_nodes)`nprint(f"Alive: {total_alive}")`n`nnodes_by_type = {}`nfor node in alive_nodes:`n    proto = node["type"]`n    if proto not in nodes_by_type:`n        nodes_by_type[proto] = []`n    nodes_by_type[proto].append(node)`n`nreadme = generate_readme(nodes_by_type, total_alive, total_fetched)`nwith open("README.md", "w", encoding="utf-8") as f:`n    f.write(readme)`n`nprint("README.md updated!")'
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git diff --staged --quiet || git commit -m "Update nodes"
+          git push

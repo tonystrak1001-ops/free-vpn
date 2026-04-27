@@ -24,8 +24,9 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run scanner
-        run: python << 'PYEOF'
+      - name: Create scanner script
+        run: |
+          cat > scanner.py << 'SCRIPTEND'
 import requests
 import base64
 import json
@@ -137,7 +138,7 @@ def generate_readme(nodes_by_type, total_alive, total_fetched):
     moscow_tz = timezone(timedelta(hours=3))
     now = datetime.now(moscow_tz).strftime("%d.%m.%Y %H:%M 袦小袣")
 
-    readme = f"# 袘械褋锌谢邪褌薪褘械 VPN 褍蟹谢褘\n\n"
+    readme = "# 袘械褋锌谢邪褌薪褘械 VPN 褍蟹谢褘\n\n"
     readme += f"袨斜薪芯胁谢械薪芯: {now}\n"
     readme += f"袙褋械谐芯 锌褉芯胁械褉械薪芯: {total_fetched}, 袪邪斜芯褔懈褏: {total_alive}\n\n"
 
@@ -187,8 +188,11 @@ readme = generate_readme(nodes_by_type, total_alive, total_fetched)
 with open("README.md", "w", encoding="utf-8") as f:
     f.write(readme)
 
-print(f"README.md updated!")
-PYEOF
+print("README.md updated!")
+SCRIPTEND
+
+      - name: Run scanner
+        run: python scanner.py
 
       - name: Commit and push
         run: |

@@ -1,0 +1,12 @@
+name: Update VPN Nodes
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Minimal workflow test"

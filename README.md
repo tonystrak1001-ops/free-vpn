@@ -1,17 +1,16 @@
 # Free VPN Nodes
 
-Updated: 27.04.2026 13:45 MSK | Total nodes: 1889
+Updated: 27.04.2026 16:21 MSK | Total nodes: 1891
 
-## VMESS (351 nodes)
+## VMESS (352 nodes)
 
 ```
+vmess://d4ab51e4-4dc7-4394-9db2-bd6779586fef@planb.mojcn.com:16616?network=ws#亚太地区 V2CROSS.COM
+vmess://d4ab51e4-4dc7-4394-9db2-bd6779586fef@t.cnmjcn.cyou:16622?network=ws#英国 V2CROSS.COM
 vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.9:180#英国 V2CROSS.COM
-vmess://7d81d7ed-03f4-331a-ab0d-e9a7425f05e0@76c3.earthdraft.onezz.top:20010?network=ws&path=/chat#广东省广州市 电信IDC机房
-vmess://d4ab51e4-4dc7-4394-9db2-bd6779586fef@t.cnmjcn.cyou:16616?network=ws#英国 V2CROSS.COM
-vmess://418048af-a293-4b99-9b0c-98ca3580dd24@103.181.164.145:51556#亚太地区 V2CROSS.COM
-vmess://cbb3f877-d1fb-344c-87a9-d153bffd5484@v30.hdacd.com:30830#英国 V2CROSS.COM
-vmess://7cd96dbe-ecec-4937-9e05-87ab70af2f30@vm51544542.dns8656815.com:7754#香港 电讯盈科有限公司
+vmess://d4ab51e4-4dc7-4394-9db2-bd6779586fef@m.cnmjin.net:16618?network=ws#英国 V2CROSS.COM
 vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.250:180#英国 V2CROSS.COM
+vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.97:180#英国 V2CROSS.COM
 vmess://44e57485-eccc-46ef-808f-cd17ac810018@547.rtxconfigz.shop:8080?network=ws&path=/@Malinda6104#🇩🇪 VMESS-未知>德国-NF解锁印度地区非自制剧-ChatGPT-TikTok-YouTube-547.rtxconfigz.shop:8080
 vmess://516d8a7a-3f0b-41d3-bad0-246116381516@t1.620720.xyz:8443?network=ws&tls=tls#🇯🇵 VMESS-美国>日本-NF解锁日本地区非自制剧-ChatGPT-YouTube-t1.620720.xyz:8443
 vmess://58fe1542-5290-40ad-815a-77707a81afe5@15.235.41.200:80?network=ws&path=/IOebhLMhl1CTbFHbL95myfRX2#🇨🇦 VMESS-加拿大-NF解锁加拿大地区非自制剧-ChatGPT-TikTok-YouTube-15.235.41.200:80
@@ -28,10 +27,12 @@ vmess://be8e3136-b874-4085-bd23-ec3699300490@cg1c01.waimaojd.com:443?network=ws&
 vmess://be8e3136-b874-4085-bd23-ec3699300490@cg1c04.waimaojd.com:443?network=ws&path=/api/v1/graphql&tls=tls#🇺🇸 VMESS-美国-ChatGPT-TikTok-YouTube-cg1c04.waimaojd.com:443
 vmess://be8e3136-b874-4085-bd23-ec3699300490@cg1c14.waimaojd.com:443?network=ws&path=/api/v1/graphql&tls=tls#🇺🇸 VMESS-美国-ChatGPT-TikTok-YouTube-cg1c14.waimaojd.com:443
 vmess://7d81d7ed-03f4-331a-ab0d-e9a7425f05e0@76c3.earthdraft.onezz.top:22013?network=ws#🇨🇳 广东省广州市 电信IDC机房
+vmess://cbb3f877-d1fb-344c-87a9-d153bffd5484@v30.hdacd.com:30830#🇬🇧 英国 V2CROSS.COM
 vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.37:180#🇬🇧 英国 V2CROSS.COM
 vmess://7cd96dbe-ecec-4937-9e05-87ab70af2f30@efan.dnsefan04881.com:7754#🇭🇰 香港 电讯盈科有限公司
 vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.214:180#🇬🇧 英国 V2CROSS.COM
 vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.233:180#🇬🇧 英国 V2CROSS.COM
+vmess://7cd96dbe-ecec-4937-9e05-87ab70af2f30@vm51544542.dns8656815.com:7754#🇭🇰 香港 电讯盈科有限公司
 vmess://cbb3f877-d1fb-344c-87a9-d153bffd5484@v10.hdacd.com:30807?aid=2#🇭🇰 香港|@ripaojiedian
 vmess://05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d@45.149.12.79:443?network=ws&tls=tls#🏁RELAY-45.149.12.79-6914
 vmess://5c841cb8-18c2-4a8c-fb5d-2a3aaa689678@172.67.153.233:8080?network=ws#🇺🇸 美国_1120333
@@ -358,12 +359,14 @@ vmess://4b36625c-b9d9-3ea6-aed5-86d62c70e16d@104.17.213.241:2086?network=ws&path
 vmess://c2477627-6b58-4084-bb59-97de55591b39@37.202.227.105:4030?tls=none#4FreeIran-24045
 ```
 
-## SS (23 nodes)
+## SS (24 nodes)
 
 ```
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB@admin.c1.webramz.co:443#%E7%88%B1%E5%B0%94%E5%85%B0+V2CROSS.COM
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB@series-a2.samanehha.co:443#%E7%88%B1%E5%B0%94%E5%85%B0+V2CROSS.COM
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB@51.132.238.109:443#%E8%8B%B1%E5%9B%BD+%E7%A4%BE%E4%BC%9A%E4%BF%9D%E9%99%A9%E5%AE%89%E5%85%A8%E9%83%A8
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.191:8080#%E8%8B%B1%E5%9B%BD+V2CROSS.COM
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxa1ZyMEtBVElKSTdtd09G@admin.c1.havij.co:443#%E7%88%B1%E5%B0%94%E5%85%B0+V2CROSS.COM
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB@series-a2.samanehha.co:443#%E7%88%B1%E5%B0%94%E5%85%B0+V2CROSS.COM
 ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#%F0%9F%87%A8%F0%9F%87%A6%20SS-%E5%8A%A0%E6%8B%BF%E5%A4%A7%3E%E8%8B%B1%E5%9B%BD-NF%E8%A7%A3%E9%94%81%E8%8B%B1%E5%9B%BD%E5%9C%B0%E5%8C%BA%E9%9D%9E%E8%87%AA%E5%88%B6%E5%89%A7-ChatGPT-144.217.164.29%3A12000
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ@45.154.204.7:990#%F0%9F%87%A6%F0%9F%87%BF%20SS-%E9%98%BF%E5%A1%9E%E6%8B%9C%E7%96%86-NF%E8%A7%A3%E9%94%81%E5%8A%A0%E6%8B%BF%E5%A4%A7%E5%9C%B0%E5%8C%BA%E9%9D%9E%E8%87%AA%E5%88%B6%E5%89%A7-ChatGPT-TikTok-YouTube-45.154.204.7%3A990
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPRGZ4aW9LMFZrS3hUZHBWUUo0cnY4SGdsQXUwdnp2Ng@146.19.49.251:443#%F0%9F%87%AC%F0%9F%87%A7%20SS-%E8%8B%B1%E5%9B%BD-NF%E8%A7%A3%E9%94%81%E8%87%AA%E5%88%B6%E5%89%A7-ChatGPT-TikTok-146.19.49.251%3A443
@@ -382,15 +385,13 @@ ss://YWVzLTEyOC1nY206SlZyc0xMTjF0a044b1haTw@chengbai02.ascwt179.com:13223#%F0%9F
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNzFhNzY3OS03NzE4LTQ2NTUtYjQ4Ny03YTA3YmFkN2E3MGM@hkp8.network-cdn-gw-yd.net:48818#%F0%9F%87%AD%F0%9F%87%B0%20HK%E9%A6%99%E6%B8%AF%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNzFhNzY3OS03NzE4LTQ2NTUtYjQ4Ny03YTA3YmFkN2E3MGM@hkp1.network-cdn-gw-yd.net:49901#%F0%9F%87%AD%F0%9F%87%B0%20HK%E9%A6%99%E6%B8%AF%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplNzc3NTEzZS05ZGY1LTRkYzMtYmM4NC03NGU1NjQzNDVhODE@usgpt.slianrk.com:13012#%F0%9F%87%AD%F0%9F%87%B0%20HK%E9%A6%99%E6%B8%AF%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB@51.132.238.109:443#%F0%9F%87%AC%F0%9F%87%A7%20%E8%8B%B1%E5%9B%BD%20%E7%A4%BE%E4%BC%9A%E4%BF%9D%E9%99%A9%E5%AE%89%E5%85%A8%E9%83%A8
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo1ZDY4ZDkxZi1jY2M1LTRjMDAtYjFmNi0wZDc2NDkzN2Y0ZjY@mofacpdd.til69.com:41921#_CN_%E4%B8%AD%E5%9B%BD
 ```
 
 ## TROJAN (151 nodes)
 
 ```
-trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.237:10369?allowInsecure=1&sni=fra5.chasem2026sud.com#%E8%8B%B1%E5%9B%BD+%E4%BC%A6%E6%95%A6Virgin+Media
-trojan://MeaDiUmPlkWbZJ2BON8tz@78.159.131.12:28259?allowInsecure=0&sni=ads.x5.ru#%E4%BF%9D%E5%8A%A0%E5%88%A9%E4%BA%9A+V2CROSS.COM
+trojan://MeaDiUmPlkWbZJ2BON8tz@78.159.131.12:28259?allowInsecure=0&sni=ads.x5.ru#%F0%9F%87%A7%F0%9F%87%AC%20%E4%BF%9D%E5%8A%A0%E5%88%A9%E4%BA%9A%20V2CROSS.COM
 trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.3:10369?allowInsecure=0&sni=fra34.chasem2026sud.com#%F0%9F%87%AC%F0%9F%87%A7%20%E8%8B%B1%E5%9B%BD%20%E4%BC%A6%E6%95%A6Virgin%20Media
 trojan://69ecb45889d99f31b8ccc10bf8f76a72@54.199.29.37:52687?allowInsecure=0&sni=www.nintendogames.net#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF3%7C%40ripaojiedian
 trojan://BxceQaOe@95.40.57.109:50612?allowInsecure=1&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF4%7C%40ripaojiedian
@@ -537,6 +538,7 @@ trojan://1234567890@77.110.116.7:443?allowInsecure=0&sni=kfm-bn0.pages.dev&ws=1&
 trojan://1234567890@194.164.198.156:8443?allowInsecure=0&sni=kfm-bn0.pages.dev&ws=1&wspath=%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3#%F0%9F%87%BA%F0%9F%87%B8%20US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 trojan://1234567890@148.253.208.19:443?allowInsecure=0&sni=kfm-bn0.pages.dev&ws=1&wspath=%2F#%F0%9F%87%A9%F0%9F%87%AA%20DE%E5%BE%B7%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 trojan://1234567890@144.31.62.181:8443?allowInsecure=0&sni=kfm-bn0.pages.dev&ws=1&wspath=%2F%3Fed%3D2560%26https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3#%F0%9F%87%A9%F0%9F%87%AA%20DE%E5%BE%B7%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.237:10369?allowInsecure=1&sni=fra5.chasem2026sud.com#%F0%9F%87%AC%F0%9F%87%A7%20%E8%8B%B1%E5%9B%BD%20%E4%BC%A6%E6%95%A6Virgin%20Media
 trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.121:10369?allowInsecure=1&sni=fra33.chasem2026sud.com#%F0%9F%87%AC%F0%9F%87%A7%20%E8%8B%B1%E5%9B%BD%20%E4%BC%A6%E6%95%A6Virgin%20Media%202
 trojan://n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj@82.26.155.199:10369?allowInsecure=1&sni=fra4.chasem2026sud.com#%F0%9F%87%AC%F0%9F%87%A7%20%E8%8B%B1%E5%9B%BD%20%E4%BC%A6%E6%95%A6Virgin%20Media%203
 trojan://5027e2a4-c4d2-463a-9508-83a2c7d1ad83@216.24.57.250:443?allowInsecure=0&sni=afrcloud1.mmv.kr&ws=1&wspath=%2F5.223.47.32%3D443#%F0%9F%87%BA%F0%9F%87%B8%20_US_%E7%BE%8E%E5%9B%BD

@@ -1,0 +1,321 @@
+name: Update VPN Nodes
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-nodes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run scanner
+        run: |
+          python << 'PYEOF'
+import requests
+import re
+import base64
+import json
+import socket
+import time
+from datetime import datetime, timezone, timedelta
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+SOURCES = [
+    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
+    "https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray",
+    "https://raw.githubusercontent.com/sharkDoor/vpn-free-nodes/main/v2ray.txt",
+    "https://raw.githubusercontent.com/mermeroo/V2RAY-CLASH-BASE64-Subscription.Links/main/V2Ray_Base64",
+    "https://raw.githubusercontent.com/xiaoji235/airport-free/main/v2ray",
+    "https://raw.githubusercontent.com/crashgfw/free-airport-nodes/main/v2ray",
+    "https://raw.githubusercontent.com/HakurouKen/free-node/master/v2ray",
+    "https://raw.githubusercontent.com/xyfqzy/free-nodes/main/nodes/v2ray.txt",
+    "https://raw.githubusercontent.com/junjun266/FreeProxyGo/main/v2ray",
+    "https://raw.githubusercontent.com/littlebais/free-proxy-nodes/main/v2ray",
+]
+
+TCP_TIMEOUT = 5
+MAX_WORKERS = 20
+
+def tcping(host, port):
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(TCP_TIMEOUT)
+        start = time.time()
+        sock.connect((host, int(port)))
+        latency = round((time.time() - start) * 1000)
+        sock.close()
+        return True, latency
+    except Exception:
+        return False, 0
+
+def parse_ss(link):
+    try:
+        link = link.replace("ss://", "")
+        if "#" in link:
+            main_part, name = link.rsplit("#", 1)
+        else:
+            main_part = link
+            name = ""
+        if "@" in main_part:
+            encoded, server_part = main_part.split("@", 1)
+            try:
+                decoded = base64.b64decode(encoded + "==" ).decode("utf-8", errors="ignore")
+                method, password = decoded.split(":", 1)
+            except Exception:
+                method, password = "", ""
+            host_port = server_part.split(":")
+            if len(host_port) >= 2:
+                host = host_port[0]
+                port = host_port[1]
+                return {"type": "ss", "host": host, "port": int(port), "name": name, "raw": "ss://" + link}
+        else:
+            try:
+                decoded = base64.b64decode(main_part + "==").decode("utf-8", errors="ignore")
+                data = json.loads(decoded)
+                return {"type": "ss", "host": data.get("add", ""), "port": int(data.get("port", 0)), "name": data.get("ps", name), "raw": "ss://" + link}
+            except Exception:
+                pass
+    except Exception:
+        pass
+    return None
+
+def parse_vmess(link):
+    try:
+        link = link.replace("vmess://", "")
+        decoded = base64.b64decode(link + "==").decode("utf-8", errors="ignore")
+        data = json.loads(decoded)
+        return {"type": "vmess", "host": data.get("add", ""), "port": int(data.get("port", 0)), "name": data.get("ps", ""), "raw": "vmess://" + link}
+    except Exception:
+        return None
+
+def parse_vless(link):
+    try:
+        link = link.replace("vless://", "")
+        if "@" in link:
+            uuid_server = link.split("@", 1)[1]
+            if "#" in uuid_server:
+                server_part = uuid_server.rsplit("#", 1)[0]
+            else:
+                server_part = uuid_server
+            host_port = server_part.split(":")
+            if len(host_port) >= 2:
+                host = host_port[0]
+                port_part = host_port[1]
+                port = int(port_part.split("?")[0])
+                name = ""
+                if "#" in link:
+                    name = link.rsplit("#", 1)[1]
+                return {"type": "vless", "host": host, "port": port, "name": name, "raw": "vless://" + link}
+    except Exception:
+        pass
+    return None
+
+def parse_trojan(link):
+    try:
+        link = link.replace("trojan://", "")
+        if "@" in link:
+            password_server = link.split("@", 1)[1]
+            if "#" in password_server:
+                server_part = password_server.rsplit("#", 1)[0]
+            else:
+                server_part = password_server
+            host_port = server_part.split(":")
+            if len(host_port) >= 2:
+                host = host_port[0]
+                port_part = host_port[1]
+                port = int(port_part.split("?")[0])
+                name = ""
+                if "#" in link:
+                    name = link.rsplit("#", 1)[1]
+                return {"type": "trojan", "host": host, "port": port, "name": name, "raw": "trojan://" + link}
+    except Exception:
+        pass
+    return None
+
+def parse_node(line):
+    line = line.strip()
+    if not line:
+        return None
+    if line.startswith("ss://"):
+        return parse_ss(line)
+    elif line.startswith("vmess://"):
+        return parse_vmess(line)
+    elif line.startswith("vless://"):
+        return parse_vless(line)
+    elif line.startswith("trojan://"):
+        return parse_trojan(line)
+    return None
+
+def fetch_source(url):
+    nodes = []
+    try:
+        resp = requests.get(url, timeout=30)
+        if resp.status_code != 200:
+            return nodes
+        content = resp.text.strip()
+        try:
+            decoded = base64.b64decode(content + "==").decode("utf-8", errors="ignore")
+            content = decoded
+        except Exception:
+            pass
+        for line in content.split("\n"):
+            node = parse_node(line)
+            if node and node["host"] and node["port"]:
+                nodes.append(node)
+    except Exception:
+        pass
+    return nodes
+
+def test_node(node):
+    alive, latency = tcping(node["host"], node["port"])
+    node["alive"] = alive
+    node["latency"] = latency
+    return node
+
+def generate_readme(nodes_by_type, total_alive, total_fetched):
+    moscow_tz = timezone(timedelta(hours=3))
+    now = datetime.now(moscow_tz).strftime("%d.%m.%Y %H:%M 袦小袣")
+
+    readme = f"""# \U0001F193 \u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u044B\u0435 VPN \u0443\u0437\u043B\u044B
+
+> \u0410\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438 \u043E\u0431\u043D\u043E\u0432\u043B\u044F\u0435\u043C\u044B\u0439 \u0441\u043F\u0438\u0441\u043E\u043A \u0440\u0430\u0431\u043E\u0447\u0438\u0445 VPN \u0443\u0437\u043B\u043E\u0432.
+> \u041E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435 \u043A\u0430\u0436\u0434\u044B\u0435 **4 \u0447\u0430\u0441\u0430**. \u041F\u0440\u043E\u0432\u0435\u0440\u043A\u0430 TCP-\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E\u0441\u0442\u0438 \u043A\u0430\u0436\u0434\u043E\u0433\u043E \u0443\u0437\u043B\u0430.
+
+## \U0001F4CA \u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430
+
+| \u041F\u043E\u043A\u0430\u0437\u0430\u0442\u0435\u043B\u044C | \u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435 |
+|---|---|
+| **\u041F\u043E\u0441\u043B\u0435\u0434\u043D\u0435\u0435 \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435** | {now} |
+| **\u0412\u0441\u0435\u0433\u043E \u043F\u0440\u043E\u0432\u0435\u0440\u0435\u043D\u043E** | {total_fetched} |
+| **\u0420\u0430\u0431\u043E\u0447\u0438\u0445 \u0443\u0437\u043B\u043E\u0432** | {total_alive} |
+| **\u041F\u0440\u043E\u0442\u043E\u043A\u043E\u043B\u044B** | {", ".join(nodes_by_type.keys()) if nodes_by_type else "\u041D\u0435\u0442"} |
+
+---
+
+"""
+
+    type_names = {
+        "ss": "Shadowsocks (SS)",
+        "vmess": "VMess",
+        "vless": "VLESS",
+        "trojan": "Trojan",
+    }
+
+    type_emojis = {
+        "ss": "\U0001F535",
+        "vmess": "\U0001F7B3",
+        "vless": "\U0001F7E2",
+        "trojan": "\U0001F534",
+    }
+
+    for proto in ["ss", "vmess", "vless", "trojan"]:
+        if proto not in nodes_by_type or not nodes_by_type[proto]:
+            continue
+        emoji = type_emojis.get(proto, "\u26AA")
+        name = type_names.get(proto, proto.upper())
+        nodes = nodes_by_type[proto]
+
+        readme += f"## {emoji} {name} ({len(nodes)} \u0443\u0437\u043B\u043E\u0432)\n\n"
+        readme += "`\n"
+        for node in nodes:
+            readme += f"{node['raw']}\n"
+        readme += "`\n\n"
+
+    readme += """---
+
+## \U0001F4D6 \u041A\u0430\u043A \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C
+
+1. \u0421\u043A\u043E\u043F\u0438\u0440\u0443\u0439\u0442\u0435 \u0441\u0441\u044B\u043B\u043A\u0443 \u0443\u0437\u043B\u0430 (\u043D\u0430\u043F\u0440\u0438\u043C\u0435\u0440, ss://..., mess://...)
+2. \u0418\u043C\u043F\u043E\u0440\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0432 \u043A\u043B\u0438\u0435\u043D\u0442:
+   - **V2rayN** / **V2rayNG** \u2014 \u0432\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0438\u0437 \u0431\u0443\u0444\u0435\u0440\u0430 \u043E\u0431\u043C\u0435\u043D\u0430
+   - **Clash** / **Clash Meta** \u2014 \u0438\u043C\u043F\u043E\u0440\u0442 \u043F\u0440\u043E\u0444\u0438\u043B\u044F
+   - **Shadowrocket** (iOS) \u2014 \u0434\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0443\u0437\u0435\u043B
+3. \u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0438\u0442\u0435\u0441\u044C \u0438 \u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435\u0441\u044C \u0441\u0432\u043E\u0431\u043E\u0434\u043D\u044B\u043C \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u043E\u043C!
+
+## \u26A0\uFE0F \u041E\u0442\u043A\u0430\u0437 \u043E\u0442 \u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0441\u0442\u0438
+
+\u042D\u0442\u043E\u0442 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439 \u043F\u0440\u0435\u0434\u043D\u0430\u0437\u043D\u0430\u0447\u0435\u043D \u0438\u0441\u043A\u043B\u044E\u0447\u0438\u0442\u0435\u043B\u044C\u043D\u043E \u0434\u043B\u044F \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0445 \u0446\u0435\u043B\u0435\u0439.
+\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435 VPN \u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043D\u043D\u043E \u0438 \u0432 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0438\u0438 \u0441 \u0437\u0430\u043A\u043E\u043D\u043E\u0434\u0430\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u043E\u043C \u0432\u0430\u0448\u0435\u0439 \u0441\u0442\u0440\u0430\u043D\u044B.
+
+---
+
+*\u042D\u0442\u043E\u0442 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439 \u043E\u0431\u043D\u043E\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438 \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E GitHub Actions.*
+"""
+
+    return readme
+
+print("=== \u0417\u0430\u043F\u0443\u0441\u043A \u0441\u043A\u0430\u043D\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F \u0443\u0437\u043B\u043E\u0432 ===")
+all_nodes = []
+seen = set()
+
+for url in SOURCES:
+    print(f"\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430: {url}")
+    nodes = fetch_source(url)
+    print(f"  \u041D\u0430\u0439\u0434\u0435\u043D\u043E \u0443\u0437\u043B\u043E\u0432: {len(nodes)}")
+    for node in nodes:
+        key = f"{node['type']}:{node['host']}:{node['port']}"
+        if key not in seen:
+            seen.add(key)
+            all_nodes.append(node)
+
+total_fetched = len(all_nodes)
+print(f"\u0412\u0441\u0435\u0433\u043E \u0443\u043D\u0438\u043A\u0430\u043B\u044C\u043D\u044B\u0445 \u0443\u0437\u043B\u043E\u0432: {total_fetched}")
+
+print("\n\u041F\u0440\u043E\u0432\u0435\u0440\u043A\u0430 TCP-\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E\u0441\u0442\u0438...")
+with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+    futures = {executor.submit(test_node, node): node for node in all_nodes}
+    done = 0
+    for future in as_completed(futures):
+        done += 1
+        if done % 20 == 0:
+            print(f"  \u041F\u0440\u043E\u0432\u0435\u0440\u0435\u043D\u043E: {done}/{total_fetched}")
+
+alive_nodes = [n for n in all_nodes if n.get("alive")]
+total_alive = len(alive_nodes)
+print(f"\u0420\u0430\u0431\u043E\u0447\u0438\u0445 \u0443\u0437\u043B\u043E\u0432: {total_alive}")
+
+nodes_by_type = {}
+for node in alive_nodes:
+    proto = node["type"]
+    if proto not in nodes_by_type:
+        nodes_by_type[proto] = []
+    nodes_by_type[proto].append(node)
+
+for proto in nodes_by_type:
+    nodes_by_type[proto].sort(key=lambda x: x.get("latency", 9999))
+
+readme = generate_readme(nodes_by_type, total_alive, total_fetched)
+
+with open("README.md", "w", encoding="utf-8") as f:
+    f.write(readme)
+
+print(f"\nREADME.md \u043E\u0431\u043D\u043E\u0432\u043B\u0451\u043D!")
+print(f"\u0412\u0441\u0435\u0433\u043E \u043F\u0440\u043E\u0432\u0435\u0440\u0435\u043D\u043E: {total_fetched}")
+print(f"\u0420\u0430\u0431\u043E\u0447\u0438\u0445: {total_alive}")
+for proto, nodes in nodes_by_type.items():
+    print(f"  {proto}: {len(nodes)}")
+PYEOF
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git diff --staged --quiet || git commit -m "袨斜薪芯胁谢械薪懈械 褍蟹谢芯胁: 2026-04-27_17:00"
+          git push

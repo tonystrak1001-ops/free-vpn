@@ -1,7 +1,6 @@
 import requests
 import base64
 import json
-import socket
 import re
 from datetime import datetime, timezone, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -27,21 +26,6 @@ SOURCES = [
     "https://raw.githubusercontent.com/ssrsub/ssrsub_subscribe/master/ssrsub",
 ]
 
-TCP_TIMEOUT = 5
-MAX_WORKERS = 30
-
-def tcping(host, port):
-    try:
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.settimeout(TCP_TIMEOUT)
-        start = time.time()
-        sock.connect((host, int(port)))
-        latency = round((time.time() - start) * 1000)
-        sock.close()
-        return True, latency
-    except Exception:
-        return False, 0
-
 def decode_vmess(link):
     try:
         link = link.strip()
@@ -61,11 +45,6 @@ def decode_vmess(link):
         host = data.get("add", "") or data.get("address", "")
         port = int(data.get("port", 0))
         name = data.get("ps", "") or data.get("remark", "")
-        net = data.get("net", "tcp")
-        path = data.get("path", "/")
-        tls = data.get("tls", "")
-        uuid = data.get("id", "") or data.get("uuid", "")
-        aid = data.get("aid", "0")
 
         if not host or not port:
             return None
@@ -74,10 +53,10 @@ def decode_vmess(link):
             "type": "vmess",
             "host": host,
             "port": port,
-            "name": name or net,
+            "name": name or "VMess",
             "raw": link
         }
-    except Exception:
+    except:
         return None
 
 def decode_ss(link):
@@ -130,6 +109,65 @@ def decode_ss(link):
         pass
     return None
 
+def decode_vless(link):
+    try:
+        link = link.strip()
+        if not link.startswith("vless://"):
+            return None
+        encoded = link[8:]
+        if "#" in encoded:
+            main_part, name = encoded.rsplit("#", 1)
+            name = unquote(name)
+        else:
+            main_part = encoded
+            name = ""
+        if "@" in main_part:
+            uuid, server_part = main_part.split("@", 1)
+            host_port = server_part.split(":")
+            if len(host_port) >= 2:
+                host = host_port[0]
+                port_part = host_port[1]
+                port = int(port_part.split("?")[0])
+                return {
+                    "type": "vless",
+                    "host": host,
+                    "port": port,
+                    "name": name or "VLESS",
+                    "raw": link
+                }
+    except:
+        pass
+    return None
+
+def decode_trojan(link):
+    try:
+        link = link.strip()
+        if not link.startswith("trojan://"):
+            return None
+        encoded = link[9:]
+        if "#" in encoded:
+            main_part, name = encoded.rsplit("#", 1)
+            name = unquote(name)
+        else:
+            main_part = encoded
+            name = ""
+        if "@" in main_part:
+            password, server_part = main_part.split("@", 1)
+            host_port = server_part.split(":")
+            if len(host_port) >= 2:
+                host = host_port[0]
+                port = int(host_port[1].split("?")[0])
+                return {
+                    "type": "trojan",
+                    "host": host,
+                    "port": port,
+                    "name": name or "Trojan",
+                    "raw": link
+                }
+    except:
+        pass
+    return None
+
 def parse_node(line):
     line = line.strip()
     if not line or line.startswith("#"):
@@ -138,6 +176,10 @@ def parse_node(line):
         return decode_vmess(line)
     elif line.startswith("ss://"):
         return decode_ss(line)
+    elif line.startswith("vless://"):
+        return decode_vless(line)
+    elif line.startswith("trojan://"):
+        return decode_trojan(line)
     return None
 
 def fetch_source(url):
@@ -149,7 +191,7 @@ def fetch_source(url):
         content = resp.text.strip()
         try:
             decoded = base64.b64decode(content + "==").decode("utf-8", errors="ignore")
-            if any(x in decoded for x in ["vmess://", "ss://"]):
+            if any(x in decoded for x in ["vmess://", "ss://", "vless://", "trojan://"]):
                 content = decoded
         except:
             pass
@@ -163,25 +205,23 @@ def fetch_source(url):
         pass
     return nodes
 
-def test_node(node):
-    alive, latency = tcping(node["host"], node["port"])
-    node["alive"] = alive
-    node["latency"] = latency
-    return node
-
-def format_readme(nodes_by_type, total_alive, total_fetched):
+def format_readme(nodes_by_type, total_found):
     moscow_tz = timezone(timedelta(hours=3))
     now = datetime.now(moscow_tz).strftime("%d.%m.%Y %H:%M MSK")
 
     readme = f"# Free VPN Nodes\n\n"
-    readme += f"Updated: {now}\n"
-    readme += f"Total checked: {total_fetched}, Working: {total_alive}\n\n"
+    readme += f"Updated: {now} | Total nodes: {total_found}\n\n"
 
     for proto, nodes in nodes_by_type.items():
         readme += f"## {proto.upper()} ({len(nodes)} nodes)\n\n"
+        readme += "```\n"
         for node in nodes:
             readme += f"{node['raw']}\n"
-        readme += "\n"
+        readme += "```\n\n"
+
+    readme += "---\n\n"
+    readme += "How to use: Copy a node link and import it into your VPN client (V2rayN, Clash, Shadowrocket, etc.)\n\n"
+    readme += "*This repo is auto-updated every 4 hours via GitHub Actions.*\n"
 
     return readme
 
@@ -199,38 +239,21 @@ for url in SOURCES:
             seen.add(key)
             all_nodes.append(node)
 
-total_fetched = len(all_nodes)
-print(f"Total unique: {total_fetched}")
-
-print("Testing connectivity...")
-with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-    futures = {executor.submit(test_node, node): node for node in all_nodes}
-    done = 0
-    for future in as_completed(futures):
-        done += 1
-        if done % 20 == 0:
-            print(f"  Checked: {done}/{total_fetched}")
-
-alive_nodes = [n for n in all_nodes if n.get("alive")]
-total_alive = len(alive_nodes)
-print(f"Alive: {total_alive}")
+total_found = len(all_nodes)
+print(f"Total unique nodes: {total_found}")
 
 nodes_by_type = {}
-for node in alive_nodes:
+for node in all_nodes:
     proto = node["type"]
     if proto not in nodes_by_type:
         nodes_by_type[proto] = []
     nodes_by_type[proto].append(node)
 
-for proto in nodes_by_type:
-    nodes_by_type[proto].sort(key=lambda x: x.get("latency", 9999))
-
-readme = format_readme(nodes_by_type, total_alive, total_fetched)
+readme = format_readme(nodes_by_type, total_found)
 
 with open("README.md", "w", encoding="utf-8") as f:
     f.write(readme)
 
-print(f"README.md updated!")
-print(f"Total checked: {total_fetched}, Working: {total_alive}")
+print(f"\nREADME.md updated!")
 for proto, nodes in nodes_by_type.items():
     print(f"  {proto}: {len(nodes)}")

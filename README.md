@@ -1,6 +1,6 @@
 # Free VPN Nodes
 
-Updated: 10.05.2026 05:08 MSK | Total nodes: 1843
+Updated: 10.05.2026 09:28 MSK | Total nodes: 1843
 
 ## SS (24 nodes)
 

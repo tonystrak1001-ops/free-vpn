@@ -1,16 +1,15 @@
 # Free VPN Nodes
 
-Updated: 12.05.2026 20:53 MSK | Total nodes: 1755
+Updated: 13.05.2026 00:11 MSK | Total nodes: 1759
 
-## VMESS (351 nodes)
+## VMESS (353 nodes)
 
 ```
-vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.214:180#英国 V2CROSS.COM
-vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.233:180#英国 V2CROSS.COM
 vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.250:180#英国 V2CROSS.COM
-vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.37:180#英国 V2CROSS.COM
-vmess://418048af-a293-4b99-9b0c-98ca3580dd24@103.181.164.145:54022?aid=64#亚太地区 V2CROSS.COM
-vmess://418048af-a293-4b99-9b0c-98ca3580dd24@103.181.164.145:51556#亚太地区 V2CROSS.COM
+vmess://b4bb30b1-b4a2-4b76-90ed-c7d54ec71d69@cf.scpnb.top:443?network=ws&path=/b4bb30b1-b4a2-4b76-90ed-c7d54ec71d69-vm&tls=tls#美国 CloudFlare节点
+vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.9:180#英国 V2CROSS.COM
+vmess://f365630d-15b5-4bd4-ad55-aa6284d7be30@planb.mojcn.com:16626?network=ws#亚太地区 V2CROSS.COM
+vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.233:180#英国 V2CROSS.COM
 vmess://44e57485-eccc-46ef-808f-cd17ac810018@547.rtxconfigz.shop:8080?network=ws&path=/@Malinda6104#🇩🇪 VMESS-未知>德国-NF解锁印度地区非自制剧-ChatGPT-TikTok-YouTube-547.rtxconfigz.shop:8080
 vmess://516d8a7a-3f0b-41d3-bad0-246116381516@t1.620720.xyz:8443?network=ws&tls=tls#🇯🇵 VMESS-美国>日本-NF解锁日本地区非自制剧-ChatGPT-YouTube-t1.620720.xyz:8443
 vmess://58fe1542-5290-40ad-815a-77707a81afe5@15.235.41.200:80?network=ws&path=/IOebhLMhl1CTbFHbL95myfRX2#🇨🇦 VMESS-加拿大-NF解锁加拿大地区非自制剧-ChatGPT-TikTok-YouTube-15.235.41.200:80
@@ -26,9 +25,12 @@ vmess://e6395c20-4571-4b34-d6b1-55a5d36e49ea@hgtrojan.zabc.net:2083?network=ws&p
 vmess://be8e3136-b874-4085-bd23-ec3699300490@cg1c01.waimaojd.com:443?network=ws&path=/api/v1/graphql&tls=tls#🇺🇸 VMESS-美国-NF解锁自制剧-ChatGPT-TikTok-YouTube-cg1c01.waimaojd.com:443
 vmess://be8e3136-b874-4085-bd23-ec3699300490@cg1c04.waimaojd.com:443?network=ws&path=/api/v1/graphql&tls=tls#🇺🇸 VMESS-美国-ChatGPT-TikTok-YouTube-cg1c04.waimaojd.com:443
 vmess://be8e3136-b874-4085-bd23-ec3699300490@cg1c14.waimaojd.com:443?network=ws&path=/api/v1/graphql&tls=tls#🇺🇸 VMESS-美国-ChatGPT-TikTok-YouTube-cg1c14.waimaojd.com:443
+vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.214:180#🇬🇧 英国 V2CROSS.COM
+vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.37:180#🇬🇧 英国 V2CROSS.COM
+vmess://418048af-a293-4b99-9b0c-98ca3580dd24@103.181.164.145:54022?aid=64#亚太地区 V2CROSS.COM
+vmess://418048af-a293-4b99-9b0c-98ca3580dd24@103.181.164.145:51556#亚太地区 V2CROSS.COM
 vmess://cbb3f877-d1fb-344c-87a9-d153bffd5484@v10.hdacd.com:30807?aid=2#🇭🇰 香港|@ripaojiedian
 vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.97:180?path=/speedtest#🇬🇧 GB英国(mibei77.com 米贝节点分享)
-vmess://d13fc2f5-3e05-4795-81eb-44143a09e552@82.198.246.9:180#🇬🇧 GB英国(mibei77.com 米贝节点分享)
 vmess://bd48e0ac-e90e-4451-a4f2-abf061cfb890@2a14:7584:d0a2::a:23456?network=ws&path=/alvin9999.com#🇺🇸 US美国(mibei77.com 米贝节点分享)
 vmess://4f47e6cc-659d-4588-8155-21d2782f1b91@103.127.243.49:53224?path=/ABCDE#🇯🇵 JP日本(mibei77.com 米贝节点分享)
 vmess://cbb3f877-d1fb-344c-87a9-d153bffd5484@v8.hdacd.com:30808?aid=2#🇺🇸 US美国(mibei77.com 米贝节点分享)
@@ -358,11 +360,13 @@ vmess://4b36625c-b9d9-3ea6-aed5-86d62c70e16d@104.17.213.241:2086?network=ws&path
 vmess://c2477627-6b58-4084-bb59-97de55591b39@37.202.227.105:4030?tls=none#4FreeIran-24045
 ```
 
-## SS (17 nodes)
+## SS (19 nodes)
 
 ```
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB@series-a1.samanehha.co:443#%E7%88%B1%E5%B0%94%E5%85%B0+V2CROSS.COM
+ss://YWVzLTEyOC1nY206SlZyc0xMTjF0a044b1haTw==@chengbai02.ascwt179.com:13223#%E7%BE%8E%E5%9B%BD+V2CROSS.COM
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHeVo1WG8waHQ0MXZZbVczSDQ=@149.28.255.6:816#%E7%BE%8E%E5%9B%BD+V2CROSS.COM
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB@series-a2.samanehha.co:443#%E7%88%B1%E5%B0%94%E5%85%B0+V2CROSS.COM
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB@series-a1.samanehha.co:443#%E7%88%B1%E5%B0%94%E5%85%B0+V2CROSS.COM
 ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#%F0%9F%87%A8%F0%9F%87%A6%20SS-%E5%8A%A0%E6%8B%BF%E5%A4%A7%3E%E8%8B%B1%E5%9B%BD-NF%E8%A7%A3%E9%94%81%E8%8B%B1%E5%9B%BD%E5%9C%B0%E5%8C%BA%E9%9D%9E%E8%87%AA%E5%88%B6%E5%89%A7-ChatGPT-144.217.164.29%3A12000
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ@45.154.204.7:990#%F0%9F%87%A6%F0%9F%87%BF%20SS-%E9%98%BF%E5%A1%9E%E6%8B%9C%E7%96%86-NF%E8%A7%A3%E9%94%81%E5%8A%A0%E6%8B%BF%E5%A4%A7%E5%9C%B0%E5%8C%BA%E9%9D%9E%E8%87%AA%E5%88%B6%E5%89%A7-ChatGPT-TikTok-YouTube-45.154.204.7%3A990
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPRGZ4aW9LMFZrS3hUZHBWUUo0cnY4SGdsQXUwdnp2Ng@146.19.49.251:443#%F0%9F%87%AC%F0%9F%87%A7%20SS-%E8%8B%B1%E5%9B%BD-NF%E8%A7%A3%E9%94%81%E8%87%AA%E5%88%B6%E5%89%A7-ChatGPT-TikTok-146.19.49.251%3A443

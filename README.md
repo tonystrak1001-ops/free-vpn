@@ -1,17 +1,12 @@
 # Free VPN Nodes
 
-Updated: 09.06.2026 13:55 MSK | Total nodes: 1804
+Updated: 09.06.2026 17:33 MSK | Total nodes: 1800
 
-## VLESS (1383 nodes)
+## VLESS (1376 nodes)
 
 ```
-vless://394f6981-a782-4779-9a85-e6cf22935d93@95.173.199.80:8443?encryption=none&security=tls&sni=buh-ro-01.fromblancwithlove.com&type=tcp#%E6%8D%B7%E5%85%8B+V2CROSS.COM
-vless://bbd67e54-1b4b-488b-a5df-708ef896ecaa@14.102.228.76:443?path=/api/v2/sync/data-stream&security=tls&alpn=http/1.1&encryption=none&type=ws&sni=wof2.cerosmakom.com#%E5%8D%B0%E5%BA%A6+V2CROSS.COM
-vless://888403d1-621b-481a-b5dc-7aca518a787b@5.35.85.51:8443?security=reality&type=tcp&packetEncoding=xudp&sni=www.kinopoisk.ru&fp=qq&flow=xtls-rprx-vision&sid=a987b6bd1781daa3&pbk=BrGL0gTKK_Ir2VwJOa91Vd8870DswnOXhA6-F92RBGI&encryption=none#%E4%BF%84%E7%BD%97%E6%96%AF+V2CROSS.COM
-vless://afcac633-0e1a-46c3-bef2-cc01cc0097c8@85.234.114.53:22231?security=tls&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=r1.mizulina.top#%E4%BF%84%E7%BD%97%E6%96%AF+V2CROSS.COM
-vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@172.67.185.178:443?encryption=none&host=hhlfy.twiladaphne.ndjp.net&path=/&security=tls&sni=hhlfy.twiladaphne.ndjp.net&type=ws#%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9
-vless://0058c215-ab1e-400c-a403-b5b2fda7e846@151.101.0.1:80?path=/&security=none&encryption=none&host=max-gb1.global.ssl.fastly.net&type=ws#%E7%BE%8E%E5%9B%BD+Fastly%E5%85%A8%E7%90%83Anycast%E8%8A%82%E7%82%B9
-vless://158d03db-e5d7-4540-a31c-b2daa7aa4964@vpnv1.aspidnet.xyz:443?security=reality&type=tcp&packetEncoding=xudp&sni=web.max.ru&fp=chrome&flow=xtls-rprx-vision&sid=247fd6dab1a34a48&pbk=7ReQIe2kMtP4rCrptgH5glkOM-JGcSAPzHNxOED-Z0s&encryption=none#%E7%BE%8E%E5%9B%BD+%E5%8D%8E%E7%9B%9B%E9%A1%BFCogent%E9%80%9A%E4%BF%A1%E5%85%AC%E5%8F%B8
+vless://fc965ad9-bdd7-4815-ad71-b39ec5972dc1@172.66.47.45:443?encryption=none&host=octopusss4.com&path=%2Ftsghdws&security=tls&sni=octopusss4.com&type=ws#%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9
+vless://afcac633-0e1a-46c3-bef2-cc01cc0097c8@r1.mizulina.top:22231?encryption=none&flow=xtls-rprx-vision&security=tls&sni=r1.mizulina.top&fp=chrome&insecure=0&allowInsecure=0&type=tcp&headerType=none#%E4%BF%84%E7%BD%97%E6%96%AF+V2CROSS.COM
 vless://7fed5bf9-a1de-41a0-ab89-694265c4895f@199.232.13.4:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=Channel---ELiV2RAY---ELiV2RAY.nET&type=ws&sni=Channel---ELiV2RAY---ELiV2RAY.nET#[🇺🇸]t.me/MoftConfig
 vless://e6236ebc-7334-4bed-977f-0c20bcdfcc00@108.165.216.195:80?path=/?ed=2560&security=none&encryption=none&host=a1.ghormehsabzi.dpdns.org.&type=ws#🔥Join+Telegram:@Farah_VPN🟣
 vless://53fa8faf-ba4b-4322-9c69-a3e5b1555049@185.16.110.20:8880?security=none&encryption=none&host=reedfree8mahsang2.redorg.ir&type=ws&sni=reedfree8mahsang2.redorg.ir#[🇫🇷]t.me/ConfigsHub
@@ -1376,30 +1371,28 @@ vless://30f5a631-5513-42d2-b1f3-141e614b13d8@nodes.maviks.eu:8443?security=reali
 vless://06e4425e-a8cb-4b63-929f-2105604ab0a9@192.0.54.25:443?sni=vv.ylka.dpdns.org&type=ws&host=vv.ylka.dpdns.org&allowInsecure=1#🔥Join+Telegram:@Farah_VPN🟣
 vless://a9f40576-6321-491f-bb4a-7d8a762eea27@vip.mosen1server.ir:80?security=&encryption=none&headerType=none&type=tcp#[🇮🇷]t.me/MoftConfig
 vless://a0de1607-5b63-fab8-a759-9f98706b6125@178.20.215.10:443?security=reality&encryption=none&pbk=GfTzhy59k9CXlAdF819OUVeBdrqIILaDIWa1bddjGnA&headerType=none&fp=chrome&spx=%2FChannel%3A---%40MTMVPN---%40MTMVPN---%40MTMVPN&type=tcp&flow=xtls-rprx-vision&sni=speed.cloudflare.com#👉🆔@MoftConfig📡🇫🇮®️Finland©️Helsinki🅿️ping:29.59ms
+vless://07dce2d7-9849-4e22-adb9-36d2763c3b89@snapp.ir:2095?path=%2F&security=none&encryption=none&host=api.aramonlineshop.ir&type=ws#🇫🇮[www.v2nodes.com] vless-FI-14250313
+vless://8dc7722c-2767-4eea-a28b-2f8daacc07e3@sca26.myfymain.com:8880?mode=gun&security=&encryption=none&type=grpc#🇮🇹[www.v2nodes.com] vless-IT-14249997
 vless://9cb72288-da5a-40a4-b856-4557f9849016@3.112.19.64:26902?security=reality&encryption=none&pbk=5CqD0ZEtt5W_xA9adU4CxjH4xAV-BdCwhDuthBBnpFM&headerType=none&fp=chrome&spx=/&type=tcp&flow=xtls-rprx-vision&sni=www.icloud.com&sid=450d60a09ffb65#🇯🇵[www.v2nodes.com] vless-JP-14248542
 vless://5d8fcd24-9634-4dd7-845c-3dc2d6291942@nid.pink-perfect.ru:443?security=reality&encryption=none&pbk=2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0&headerType=none&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=www.google.com&sid=86b80f1e713a33ad#🇳🇱[www.v2nodes.com] vless-NL-14248175
 vless://2703cda8-5cf4-019d-c4bd-6cf0c2261946@122.8.44.3:993?security=reality&encryption=none&pbk=UvQ2HZFkQXrBiaprbcmks-aFo1dvnfPlHXcUKcl-i04&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=dl.google.com#🇰🇿[www.v2nodes.com] vless-KZ-14247794
-vless://cabbfe13-038b-4dbb-9c45-5079c829abfa@167.82.0.1:80?path=/&security=none&encryption=none&host=max-gb1.global.ssl.fastly.net&type=ws#🇩🇪[www.v2nodes.com] vless-DE-14247685
+vless://cabbfe13-038b-4dbb-9c45-5079c829abfa@199.232.197.131:80?path=/&security=none&encryption=none&host=max-gb1.global.ssl.fastly.net&type=ws#🏳[www.v2nodes.com] vless-
 vless://5481bfe3-bf42-425c-b561-cb9d64bff7ff@w6.homestorage.online:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=A3PWLCRX9oeSyPvrmrwj2jUXcLo2uCwAISRBHtNE1Xw&sni=5post-gate.x5.ru#🇫🇮[www.v2nodes.com] vless-FI-14247683
 vless://85c42ce4-7789-49cb-9012-9d6d6ba16581@tralalero.site:8443?type=tcp&headerType=none&security=reality&encryption=none&sni=storage.yandex.net&fp=chrome&pbk=_CjW0Khlrr5z5oc9Oy6-w2ZEanz-zMBktVn5EOX9oTM&sid=6419bed7fd0a2cff&flow=xtls-rprx-vision#🇮🇹[www.v2nodes.com] vless-IT-14247678
 vless://eb8613e3-8393-4cff-a3ad-6501fd4adc63@152.69.195.67:47878?allowInsecure=0&sni=152.69.195.67#🇯🇵[www.v2nodes.com] vless-JP-14247663
-vless://0058c215-ab1e-400c-a403-b5b2fda7e846@199.232.197.131:80?type=ws&host=max-gb1.global.ssl.fastly.net&path=/#🇩🇪[www.v2nodes.com] vless-DE-14247662
 vless://347a56c2-a453-4b32-86cd-7522943df88c@103.119.19.201:2087?security=reality&encryption=none&pbk=vZuBWF0YzlKI0fJWxU6hmOLHHQ5Qb1kf35HbZDcFCH4&headerType=none&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=api-maps.yandex.ru&sid=493c3d4e37c23c28#🇭🇰[www.v2nodes.com] vless-HK-14247386
-vless://3ade7ca1-c7e7-40a4-80f2-d1ac301b5fd6@45.38.60.52:443?security=reality&encryption=none&pbk=kYkeZ9EqtO7Wsr6mgs6nqLA4M_FD516UOlGes4jVzFE&headerType=none&fp=chrome&spx=%2Fyq4ChH8w8pot1Qc&type=tcp&flow=xtls-rprx-vision&sni=www.amazon.com&sid=5e152318#🇺🇸[www.v2nodes.com] vless-US-14247181
-vless://a2e5ac45-fd88-4f77-8e23-a7751f6a69e6@104.253.43.47:5775?security=reality&encryption=none&pbk=ny33x7ljQJAzFN1sDxaTb90zlGIPABs3SskxeuXE4kI&headerType=none&fp=chrome&spx=%2FCZOLnCHCmtsRpdZ&type=tcp&sni=www.yahoo.com&sid=6443cb87ea#🇨🇦[www.v2nodes.com] vless-CA-14247144
-vless://b2bfb4f3-f4c3-4323-9810-a086fef2f25d@199.232.78.159:443?path=%2F&security=tls&encryption=none&insecure=1&host=pan1.global.ssl.fastly.net&type=ws&allowInsecure=1&sni=default.ssl.fastly.net#🇺🇸[www.v2nodes.com] vless-US-14247141
 ```
 
 ## TROJAN (46 nodes)
 
 ```
-trojan://rXyShM8Jni+5Sbq3k4gkyr5Lq0zOMRL2Uf@45.79.8.17:443?security=tls&sni=45.79.8.17#%E7%BE%8E%E5%9B%BD+%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF%E5%B7%9E%E8%BE%BE%E6%8B%89%E6%96%AFLinode%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83
-trojan://humanity@www.calmlunch.com:443?allowInsecure=1&fp=chrome&host=www.calmlunch.com&path=%2Fassignment&security=tls&type=ws#%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9
-trojan://humanity@104.16.174.12:443?path=%2Fassignment&security=tls&insecure=0&host=www.ignitelimit.com&type=ws&allowInsecure=0&sni=www.ignitelimit.com#%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9
-trojan://PtRV8to08i8FMsY.Uw7=yMuIaR3eVTGmvA@149.104.87.182:443?security=tls&sni=www.jewelapp.click#%E7%BE%8E%E5%9B%BD+V2CROSS.COM
+trojan://humanity@www.multiplydose.com:443?path=/assignment&security=tls&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=www.multiplydose.com#%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9
+trojan://humanity@104.20.6.134:443?path=%2Fassignment&security=tls&alpn=http%2F1.1&insecure=0&host=www.calmloud.com&fp=chrome&type=ws&allowInsecure=0&sni=www.calmloud.com#%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9
+trojan://rXyShM8Jni+5Sbq3k4gkyr5Lq0zOMRL2Uf@45.79.8.17:443?security=tls&headerType=none&type=tcp&sni=45.79.8.17#%E7%BE%8E%E5%9B%BD+%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF%E5%B7%9E%E8%BE%BE%E6%8B%89%E6%96%AFLinode%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83
+trojan://humanity@141.193.213.10:443?path=/assignment&security=tls&alpn=http/1.1&insecure=0&host=www.calmloud.com&fp=chrome&type=ws&allowInsecure=0&sni=www.calmloud.com#%E7%BE%8E%E5%9B%BD+RF+Engineering
 trojan://hxn2jK9Uzezogua0oHuq9Y8viN=UCe.2Jd@185.137.157.254:443?allowInsecure=0&sni=www.directorypipeline.click#%F0%9F%87%B7%F0%9F%87%B4%20%E7%BD%97%E9%A9%AC%E5%B0%BC%E4%BA%9A%20V2CROSS.COM
 trojan://qDVh0NalwefxyZlHh3Ni2JSlhErcuC3Wiq@91.233.8.138:443?allowInsecure=0&sni=www.homelywebs.click#%F0%9F%87%A9%F0%9F%87%AA%20%E5%BE%B7%E5%9B%BD%20V2CROSS.COM
-trojan://humanity@104.20.6.134:443?allowInsecure=0&sni=www.calmloud.com&ws=1&wspath=%2Fassignment#%F0%9F%87%BA%F0%9F%87%B8%20%E7%BE%8E%E5%9B%BD%20CloudFlare%E8%8A%82%E7%82%B9
+trojan://PtRV8to08i8FMsY.Uw7=yMuIaR3eVTGmvA@149.104.87.182:443?allowInsecure=0&sni=www.jewelapp.click#%F0%9F%87%BA%F0%9F%87%B8%20%E7%BE%8E%E5%9B%BD%20V2CROSS.COM
 trojan://iGccGWTMHtoXtBhGYK4mogg7iIUhGbcvCf@64.176.65.85:443?allowInsecure=0#%F0%9F%87%BA%F0%9F%87%B8%20%E7%BE%8E%E5%9B%BD%20%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A
 trojan://d02e3bb7e6b3333e818d36866d40de6e@43.199.189.110:53018?allowInsecure=1&sni=www.nintendogames.net#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF3%7C%40ripaojiedian
 trojan://BxceQaOe@119.246.1.143:443?allowInsecure=1&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF4%7C%40ripaojiedian
@@ -1441,9 +1434,10 @@ trojan://telegram-id-privatevpns@35.181.235.93:22222?security=tls&alpn=http/1.1&
 trojan://telegram-id-privatevpns@35.181.123.19:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#🇫🇷[www.v2nodes.com] trojan-FR-14247717
 ```
 
-## SS (17 nodes)
+## SS (19 nodes)
 
 ```
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNTExNTg0NS1jYzIzLTQwODItOTA1ZS04NjlmZTIxMmRmZWY=@account-center.zzdy25.com:36321#%E5%8F%B0%E6%B9%BE%E7%9C%81%E5%8F%B0%E4%B8%AD%E5%B8%82+%E4%B8%AD%E5%8D%8E%E7%94%B5%E4%BF%A1
 ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#%F0%9F%87%A8%F0%9F%87%A6%20SS-%E5%8A%A0%E6%8B%BF%E5%A4%A7%3E%E8%8B%B1%E5%9B%BD-NF%E8%A7%A3%E9%94%81%E8%8B%B1%E5%9B%BD%E5%9C%B0%E5%8C%BA%E9%9D%9E%E8%87%AA%E5%88%B6%E5%89%A7-ChatGPT-144.217.164.29%3A12000
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ@45.154.204.7:990#%F0%9F%87%A6%F0%9F%87%BF%20SS-%E9%98%BF%E5%A1%9E%E6%8B%9C%E7%96%86-NF%E8%A7%A3%E9%94%81%E5%8A%A0%E6%8B%BF%E5%A4%A7%E5%9C%B0%E5%8C%BA%E9%9D%9E%E8%87%AA%E5%88%B6%E5%89%A7-ChatGPT-TikTok-YouTube-45.154.204.7%3A990
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPRGZ4aW9LMFZrS3hUZHBWUUo0cnY4SGdsQXUwdnp2Ng@146.19.49.251:443#%F0%9F%87%AC%F0%9F%87%A7%20SS-%E8%8B%B1%E5%9B%BD-NF%E8%A7%A3%E9%94%81%E8%87%AA%E5%88%B6%E5%89%A7-ChatGPT-TikTok-146.19.49.251%3A443
@@ -1458,14 +1452,16 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo4NjAzOWI3MS1iYTgyLTRjYTgtODM4ZS04NzA4NmFlNjY
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpYVU1UeWdFTTFqVllJdnlzWEtxQTVU@hackney-latest-strike.freesocks.work:443#%F0%9F%87%BA%F0%9F%87%B8%20US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ@r3mrcg001286ek2.cybervena.com:50099#%F0%9F%87%BA%F0%9F%87%B8%20US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpoYkdycGZ2TnJKc1VtS21QYlIzaVky@tinkered-pennies-puppies.freesocks.work:443#%F0%9F%87%BA%F0%9F%87%B8%20US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNTExNTg0NS1jYzIzLTQwODItOTA1ZS04NjlmZTIxMmRmZWY@account-center.zzdy25.com:36321#%F0%9F%87%A8%F0%9F%87%B3%20TW%E5%8F%B0%E6%B9%BE%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNTExNTg0NS1jYzIzLTQwODItOTA1ZS04NjlmZTIxMmRmZWY@account-center.zzdy25.com:38320#%F0%9F%87%A8%F0%9F%87%B3%20TW%E5%8F%B0%E6%B9%BE%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNTExNTg0NS1jYzIzLTQwODItOTA1ZS04NjlmZTIxMmRmZWY=@account-center.zzdy25.com:38777#🇹🇼[www.v2nodes.com] ss-TW-14250140
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB@series-a2.samanehha.co:443#🇬🇧[www.v2nodes.com] ss-GB-14249860
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3YjU2YWVhYS04ZTJkLTRiZGYtYjFkNy0yMzNlY2NhMTVmNTY@namrcg001640lrm.cybervena.com:50099#🇹🇼[www.v2nodes.com] ss-TW-14247340
 ```
 
-## VMESS (358 nodes)
+## VMESS (359 nodes)
 
 ```
+vmess://52f9cbfb-5bb3-3dd3-b947-725e365c59f3@6654c734ccab8f440ff0825eb443dc7f.qos.onl:10123?network=ws#亚太地区 V2CROSS.COM
 vmess://44e57485-eccc-46ef-808f-cd17ac810018@547.rtxconfigz.shop:8080?network=ws&path=/@Malinda6104#🇩🇪 VMESS-未知>德国-NF解锁印度地区非自制剧-ChatGPT-TikTok-YouTube-547.rtxconfigz.shop:8080
 vmess://516d8a7a-3f0b-41d3-bad0-246116381516@t1.620720.xyz:8443?network=ws&tls=tls#🇯🇵 VMESS-美国>日本-NF解锁日本地区非自制剧-ChatGPT-YouTube-t1.620720.xyz:8443
 vmess://58fe1542-5290-40ad-815a-77707a81afe5@15.235.41.200:80?network=ws&path=/IOebhLMhl1CTbFHbL95myfRX2#🇨🇦 VMESS-加拿大-NF解锁加拿大地区非自制剧-ChatGPT-TikTok-YouTube-15.235.41.200:80

@@ -1,19 +1,18 @@
 # Free VPN Nodes
 
-Updated: 13.06.2026 05:44 MSK | Total nodes: 1830
+Updated: 13.06.2026 10:41 MSK | Total nodes: 1827
 
-## VLESS (1386 nodes)
+## VLESS (1381 nodes)
 
 ```
-vless://8ea0665e-dee3-418c-8822-1f70f350f2db@de.pink-perfect.ru:443?security=reality&encryption=none&pbk=2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=yandex.net&sid=86b80f1e713a33ad#%E4%BF%9D%E5%8A%A0%E5%88%A9%E4%BA%9A+V2CROSS.COM
-vless://cabbfe13-038b-4dbb-9c45-5079c829abfa@151.101.2.219:80?encryption=none&type=ws&path=/&host=max-gb1.global.ssl.fastly.net#%E7%BE%8E%E5%9B%BD+Fastly%E5%85%A8%E7%90%83Anycast%E8%8A%82%E7%82%B9
-vless://0058c215-ab1e-400c-a403-b5b2fda7e846@199.232.197.131:80?path=%2F&security=&encryption=none&host=max-gb1.global.ssl.fastly.net&type=ws#%E7%BE%8E%E5%9B%BD+V2CROSS.COM
-vless://aed8656b-6479-4c04-9437-c7e16aa52a06@104.21.46.80:80?security=none&allowInsecure=0&encryption=none&type=ws&host=jolly-base-0bce.hamedpop2.workers.dev&path=/eyJqdW5rIjoidXlXRjN1SVB6MllockoiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=?ed=2560#%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9
-vless://cabbfe13-038b-4dbb-9c45-5079c829abfa@167.82.0.1:80?path=/&security=none&encryption=none&host=max-gb1.global.ssl.fastly.net&type=ws#%E7%BE%8E%E5%9B%BD+V2CROSS.COM
-vless://fe273991-0514-4a16-8ec4-b15ae861c000@172.64.152.241:80?ed=2048&eh=Sec-WebSocket-Protocol&encryption=none&host=zyzzzoao.xn--fiqv8j.eu.org&path=%2F&security=none&type=ws#%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9
-vless://fe273991-0514-4a16-8ec4-b15ae861c000@172.67.152.183:80?ed=2048&eh=Sec-WebSocket-Protocol&encryption=none&host=zyzzzoao.xn--fiqv8j.eu.org&path=%2F&security=none&type=ws#%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9
-vless://6202b230-417c-4d8e-b624-0f71afa9c75d@31.185.108.30:8880?encryption=none&security=none&type=ws&host=vms.lifetime23.workers.dev&path=%2F#%E5%BE%B7%E5%9B%BD+V2CROSS.COM
-vless://af475b0e-0c07-40fe-b4db-3dea2c0a481d@91.193.58.17:2083?allowInsecure=1&sni=edgetunnel-cmliu.lyqnihao.dpdns.org&type=ws&host=edgetunnel-cmliu.lyqnihao.dpdns.org&path=/fp=chrome&security=tls#%E4%BF%84%E7%BD%97%E6%96%AF+V2CROSS.COM
+vless://931729a8-3c20-4841-89a1-f18dc9ce0a6f@cdn3-87.vk-cdnvideo.com:8443?security=tls&encryption=none&headerType=none&fp=chrome&type=tcp&sni=cdn3-87.vk-cdnvideo.com#%E5%85%8B%E7%BD%97%E5%9C%B0%E4%BA%9A+V2CROSS.COM
+vless://0058c215-ab1e-400c-a403-b5b2fda7e846@www.parsvds.com:8080?path=/&security=none&encryption=none&host=tr-cd.sublink-vip2.com&type=ws#%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9
+vless://931729a8-3c20-4841-89a1-f18dc9ce0a6f@46.229.243.144:8443?allowInsecure=0&sni=cdn3-87.vk-cdnvideo.com&fp=chrome&security=tls#%E5%85%8B%E7%BD%97%E5%9C%B0%E4%BA%9A+V2CROSS.COM
+vless://cabbfe13-038b-4dbb-9c45-5079c829abfa@167.82.0.1:80?allowInsecure=0&sni=max-gb1.global.ssl.fastly.net&type=ws&host=max-gb1.global.ssl.fastly.net&path=/#%E7%BE%8E%E5%9B%BD+V2CROSS.COM
+vless://3120446f-78e3-4974-8a00-42b718382bda@213.21.246.51:29800?encryption=none&type=tcp&security=reality&sni=dl.google.com&fp=chrome&insecure=1&allowInsecure=1&pbk=8Ct5aCwudtGt9MtmAP1kPmoWgaHyrb0iBzmINPHRgSo&sid=b7d4820f3f&spx=/#%E6%8B%89%E8%84%B1%E7%BB%B4%E4%BA%9A+V2CROSS.COM
+vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@162.159.12.41:443?allowInsecure=1&encryption=none&host=hhlfy.twiladaphne.ndjp.net&path=/fp=chrome&security=tls&sni=hhlfy.twiladaphne.ndjp.net&type=ws#%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9
+vless://afcac633-0e1a-46c3-bef2-cc01cc0097c8@72.56.59.223:22231?encryption=none&flow=xtls-rprx-vision&security=tls&sni=r1.mizulina.top&type=tcp#%E7%BE%8E%E5%9B%BD+%E4%BD%9B%E7%BD%97%E9%87%8C%E8%BE%BE%E5%B7%9E%E8%BF%88%E9%98%BF%E5%AF%86%E5%B8%82
+vless://931729a8-3c20-4841-89a1-f18dc9ce0a6f@77.74.123.180:8443?allowInsecure=0&sni=cdn7-09.vk-cdnvideo.com&fp=chrome&security=tls#%E8%8B%B1%E5%9B%BD+V2CROSS.COM
 vless://7fed5bf9-a1de-41a0-ab89-694265c4895f@199.232.13.4:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=Channel---ELiV2RAY---ELiV2RAY.nET&type=ws&sni=Channel---ELiV2RAY---ELiV2RAY.nET#[🇺🇸]t.me/MoftConfig
 vless://e6236ebc-7334-4bed-977f-0c20bcdfcc00@108.165.216.195:80?path=/?ed=2560&security=none&encryption=none&host=a1.ghormehsabzi.dpdns.org.&type=ws#🔥Join+Telegram:@Farah_VPN🟣
 vless://53fa8faf-ba4b-4322-9c69-a3e5b1555049@185.16.110.20:8880?security=none&encryption=none&host=reedfree8mahsang2.redorg.ir&type=ws&sni=reedfree8mahsang2.redorg.ir#[🇫🇷]t.me/ConfigsHub
@@ -376,6 +375,7 @@ vless://fdb667db-7ba5-4f9c-aa1f-705504706257@104.21.96.1:2095?security=none&type
 vless://b6775c28-f69c-448e-ae30-719cd21539da@172.66.47.173:2053?security=tls&sni=JoiNmaHdisERVER-GE4.pAgeS.DeV&type=ws&host=joinmahdiserver-ge4.pages.dev&fp=chrome&alpn=h2,http/1.1#🔥Join+Telegram:@Farah_VPN🟣
 vless://d6b8011a-c725-435a-9fec-bf6d3530392c@103.160.204.26:2053?&security=tls&fp=randomized&sni=vle.amclubsdns.dpdns.org&type=ws&headerType=none&host=vle.amclubsdns.dpdns.org&path=%2F%3Fed%3D2560%26PROT_TYPE%3Dvless#%E6%9C%AA%E7%9F%A5_0628052432
 vless://53fa8faf-ba4b-4322-9c69-a3e5b1555049@45.131.5.211:80?security=none&encryption=none&host=reedfree8mahsang2.redorg.ir&type=ws#👉🆔@MoftConfig📡🇧🇿®️Belize©️Belize City🅿️ping:8.15ms
+vless://37953a08-dad2-4f9e-abd3-c7a4ad8910bf@151.101.2.219:80?type=xhttp&mode=auto&host=yyfgydh.global.ssl.fastly.net&path=/#👉🆔@MoftConfig📡🇺🇸®️United States©️San Francisco🅿️ping:7.04ms
 vless://9f3c4ab7-ea26-4d96-91a9-c85ff64ad9a0@173.245.59.13:8880?type=ws#US_2f3bc_0231
 vless://0ef0630e-544c-4ed0-a4de-861f14695f37@172.66.46.236:443?path=%2Fognicwivyrkxih6r&security=tls&encryption=none&host=M2-1CM.paGes.DeV&type=ws&sni=M2-1CM.paGes.DeV#[🇨🇦]t.me/ConfigsHub
 vless://ee6774c0-9b19-4ff1-8b30-2da4b71977e2@104.21.74.120:443?sni=edcci.aimercc.filegear-sg.me&type=ws&allowInsecure=1#🔥Join+Telegram:@Farah_VPN🟣
@@ -1377,26 +1377,23 @@ vless://30f5a631-5513-42d2-b1f3-141e614b13d8@nodes.maviks.eu:8443?security=reali
 vless://06e4425e-a8cb-4b63-929f-2105604ab0a9@192.0.54.25:443?sni=vv.ylka.dpdns.org&type=ws&host=vv.ylka.dpdns.org&allowInsecure=1#🔥Join+Telegram:@Farah_VPN🟣
 vless://a9f40576-6321-491f-bb4a-7d8a762eea27@vip.mosen1server.ir:80?security=&encryption=none&headerType=none&type=tcp#[🇮🇷]t.me/MoftConfig
 vless://a0de1607-5b63-fab8-a759-9f98706b6125@178.20.215.10:443?security=reality&encryption=none&pbk=GfTzhy59k9CXlAdF819OUVeBdrqIILaDIWa1bddjGnA&headerType=none&fp=chrome&spx=%2FChannel%3A---%40MTMVPN---%40MTMVPN---%40MTMVPN&type=tcp&flow=xtls-rprx-vision&sni=speed.cloudflare.com#👉🆔@MoftConfig📡🇫🇮®️Finland©️Helsinki🅿️ping:29.59ms
-vless://2703cda8-5cf4-019d-c4bd-6cf0c2261946@122.8.44.3:993?security=reality&encryption=none&pbk=UvQ2HZFkQXrBiaprbcmks-aFo1dvnfPlHXcUKcl-i04&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=dl.google.com#🇰🇿[www.v2nodes.com] vless-KZ-14294596
+vless://5f65c1ae-9e7a-48ea-8ecf-6822365cd177@vxc.galardoxtn.ir:443?path=%2F&security=tls&encryption=none&insecure=1&host=apiv2.global.ssl.fastly.net&type=ws&allowInsecure=1&sni=speedtest.net#🇩🇪[www.v2nodes.com] vless-DE-14299250
+vless://2703cda8-5cf4-019d-c4bd-6cf0c2261946@122.8.44.3:993?security=reality&encryption=none&pbk=UvQ2HZFkQXrBiaprbcmks-aFo1dvnfPlHXcUKcl-i04&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=dl.google.com#🇰🇿[www.v2nodes.com] vless-KZ-14299122
+vless://8faf6e38-0531-4d63-91f0-2aba5b9ff864@1.sdwan.realm-sync.com:5454?security=reality&type=tcp&packetEncoding=xudp&sni=swcdn.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=4265cc8365&pbk=7Mb18pl7fH3NvhVevIVTgRdPlAorUucOWMlUaTrDV0o&encryption=none#🇯🇵[www.v2nodes.com] vless-JP-14295261
 vless://8ea0665e-dee3-418c-8822-1f70f350f2db@sw.pink-perfect.ru:443?security=reality&encryption=none&pbk=2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=yandex.net&sid=86b80f1e713a33ad#🇺🇸[www.v2nodes.com] vless-US-14294363
 vless://5e6cd281-2d03-4e72-9bb2-b38ce2da7cc7@pl.moktana.app:443?mode=gun&security=reality&encryption=none&pbk=zz1etKRzRA4fwe0Te0p6jAlHorNJs4mmcljA3oL520E&fp=chrome&type=grpc&serviceName=moktana.net.v1.StreamService&sni=pl.moktana.app&sid=51e9fd4ba43f64d7#🇵🇱[www.v2nodes.com] vless-PL-14293477
-vless://0599ca07-cc1c-4e42-b637-6e286f43beb2@193.149.185.17:41510?type=ws&host=&path=/#🇬🇧[www.v2nodes.com] vless-GB-14293086
-vless://5a4ef156-7139-4922-9198-f88a9ccaf3dc@169.40.32.242:8080?type=ws&host=169.40.32.242&path=/Path#🇩🇪[www.v2nodes.com] vless-DE-14292569
+vless://0599ca07-cc1c-4e42-b637-6e286f43beb2@193.149.185.17:41510?type=ws&host=&path=/#🏳[www.v2nodes.com] vless-
+vless://aa3be851-9f8b-4aec-973b-879247847656@169.40.32.242:8080?path=%2FPath&security=none&encryption=none&host=169.40.32.242&type=ws#🇩🇪[www.v2nodes.com] vless-DE-14292569
 vless://1c0277ad-bb4d-496f-bc0c-40ccee03fca5@31.56.188.94:7443?security=reality&encryption=none&pbk=5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=mi.com&sid=be0ce047#🇵🇱[www.v2nodes.com] vless--14290594PL
 vless://1c0277ad-bb4d-496f-bc0c-40ccee03fca5@130.12.242.109:7443?security=reality&encryption=none&pbk=5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.microsoft.com&sid=be0ce047#🇳🇱[www.v2nodes.com] vless-NL-14290588
-vless://17451fec-af94-4715-8c2f-7f6839130d0a@96.126.129.195:2040?encryption=none&fp=chrome&pbk=LidllyozUeeSbuzJ0ZfieGoy8YjVzqXX9H2m9whPaG0&security=reality&sid=53197c66aef53c44&sni=tradingview.com&type=tcp#🇩🇪[www.v2nodes.com] vless-DE-14290320
-vless://45c8d20e-0222-4b16-8d21-37318456b980@47.79.149.248:38388?encryption=none&type=tcp&security=reality&headerType=none&sni=itunes.apple.com&fp=chrome&insecure=1&allowInsecure=1&pbk=xHaPe5SLprSSqGccSor5d3tCRuwyowBwFeYrVXoSz3w&sid=6ba85179e30d4fc2&flow=xtls-rprx-vision#🇯🇵[www.v2nodes.com] vless-JP-14289187
-vless://ad356e93-cc14-417d-9f4e-32376d03f5b7@46.225.155.159:1006?security=reality&encryption=none&pbk=2iijxUyJsanFAkX0ctH6H4RTW1N4mQYnIsaP8qrbbS8&headerType=none&fp=chrome&type=tcp&sni=yahoo.com&sid=0c3a409c2ba7d083#🇩🇪[www.v2nodes.com] vless-DE-14288827
-vless://8dc7722c-2767-4eea-a28b-2f8daacc07e3@sca30.mysilipdir.com:8880?mode=gun&security=none&encryption=none&type=grpc&sni=sca30.mysilipdir.com#🇮🇹[www.v2nodes.com] vless-IT-14288807
-vless://5f65c1ae-9e7a-48ea-8ecf-6822365cd177@vxc.galardoxtn.ir:443?path=%2F&security=tls&encryption=none&insecure=1&host=apiv2.global.ssl.fastly.net&type=ws&allowInsecure=1&sni=speedtest.net#🇩🇪[www.v2nodes.com] vless-DE-14288588
-vless://afcac633-0e1a-46c3-bef2-cc01cc0097c8@r1.mizulina.top:22231?allowInsecure=0&sni=r1.mizulina.top&flow=xtls-rprx-vision-udp443&fp=edge&security=tls#🇬🇪[www.v2nodes.com] vless-GE-14288484
-vless://c35050ce-01ab-45a9-91b8-54cec637d0a8@185.184.121.101:8443?path=%2Fudfyfws&security=tls&encryption=none&insecure=1&host=octopusss5.info&type=ws&allowInsecure=1&sni=octopusss5.info#🇫🇮[www.v2nodes.com] vless-FI-14287998
 ```
 
-## TROJAN (56 nodes)
+## TROJAN (59 nodes)
 
 ```
-trojan://mitivpn@188.114.97.6:443?path=https://chatgpt.com&security=tls&alpn=http/1.1&insecure=0&host=mitivpn.de.ssl.global.fastly.net.mitivpn.site&fp=chrome&type=ws&allowInsecure=0&sni=2.1.mitivpn.dee.srfsl.gleobal.fastl3y.n3et.mitivpn.site#%E5%B7%B4%E8%A5%BF%E5%9C%A3%E4%BF%9D%E7%BD%97+CloudFlare%E8%8A%82%E7%82%B9
+trojan://BSs5IAVMQdYuykvDsOYZoa6gNPSGBjAbLL@185.126.236.44:443?allowInsecure=0&security=tls&sni=www.mesaly.click#%E8%8B%B1%E5%9B%BD+V2CROSS.COM
+trojan://qDVh0NalwefxyZlHh3Ni2JSlhErcuC3Wiq@91.233.8.138:443?allowInsecure=0&security=tls&sni=www.homelywebs.click#%E5%BE%B7%E5%9B%BD+V2CROSS.COM
+trojan://I1vtf6pjYsAu-nFnraWAMjKTy90AHitdAz@91.233.8.25:443?security=tls&sni=fra34.tracker-ws.click&type=tcp#%E5%BE%B7%E5%9B%BD+V2CROSS.COM
 trojan://d02e3bb7e6b3333e818d36866d40de6e@18.183.58.98:53018?allowInsecure=1&sni=www.nintendogames.net#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF3%7C%40ripaojiedian
 trojan://BxceQaOe@18.166.62.24:1123?allowInsecure=1&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF4%7C%40ripaojiedian
 trojan://BxceQaOe@95.40.19.84:1123?allowInsecure=1&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF5%7C%40ripaojiedian
@@ -1442,7 +1439,6 @@ trojan://s_WEN9lMmufG+qDIsn-4C7JOVAnDdbS3Ui@172.236.220.10:443?allowInsecure=0&s
 trojan://s.wRSE4ANZp4=4h.=B_9Qbetw6XUc0V1SV@130.94.107.171:443?allowInsecure=0&sni=www.logger-guard.click#%F0%9F%87%BA%F0%9F%87%B8%20%E7%BE%8E%E5%9B%BD%20%E7%A7%91%E7%BD%97%E6%8B%89%E5%A4%9A%E5%B7%9E%E9%98%BF%E6%8B%89%E5%B8%95%E9%9C%8D%E5%8E%BF%E6%A0%BC%E6%9E%97%E4%BC%8D%E5%BE%B7%E6%9D%91%E5%B8%82NTT%E7%BE%8E%E5%9B%BD%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
 trojan://hxn2jK9Uzezogua0oHuq9Y8viN=UCe.2Jd@185.137.157.254:443?allowInsecure=0&sni=www.directorypipeline.click#%F0%9F%87%B7%F0%9F%87%B4%20%E7%BD%97%E9%A9%AC%E5%B0%BC%E4%BA%9A%20starcorenode.com
 trojan://humanity@104.20.6.134:443?allowInsecure=0&sni=www.calmloud.com&ws=1&wspath=%252Fassignment#%F0%9F%87%BA%F0%9F%87%B8%20%E7%BE%8E%E5%9B%BD%20CloudFlare%E8%8A%82%E7%82%B9
-trojan://qDVh0NalwefxyZlHh3Ni2JSlhErcuC3Wiq@91.233.8.138:443?allowInsecure=0&sni=www.homelywebs.click#%F0%9F%87%A9%F0%9F%87%AA%20%E5%BE%B7%E5%9B%BD%20starcorenode.com
 trojan://r-_YbwF.j0TtHVewoFIppramjAnmSfqYzJ@172.238.120.124:443?allowInsecure=0#%F0%9F%87%BA%F0%9F%87%B8%20%E7%BE%8E%E5%9B%BD%20Akamai%E7%A7%91%E6%8A%80%E5%85%AC%E5%8F%B8CDN%E7%BD%91%E7%BB%9C%E8%8A%82%E7%82%B9%202
 trojan://BxceQaOe@95.40.68.192:17801?allowInsecure=1&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0_HK_%E4%B8%AD%E5%9B%BD%E9%A6%99%E6%B8%AF-%3E%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD
 trojan://4f4d1167-ef14-4304-9bce-0740472503ef@90081bb25c.node.tro.cac.cab:46424?allowInsecure=1&sni=de.01.naiun.bilibili.com#%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD-%3E%F0%9F%87%A9%F0%9F%87%AA_DE_%E5%BE%B7%E5%9B%BD
@@ -1451,13 +1447,14 @@ trojan://4f4d1167-ef14-4304-9bce-0740472503ef@90081bb25c.node.tro.cac.cab:41943?
 trojan://4f4d1167-ef14-4304-9bce-0740472503ef@90081bb25c.node.tro.cac.cab:47909?allowInsecure=1&sni=is.01.naiun.bilibili.com#%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD-%3E%F0%9F%87%AE%F0%9F%87%B8_IS_%E5%86%B0%E5%B2%9B
 trojan://BxceQaOe@95.40.68.150:2702?allowInsecure=1&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0_HK_%E4%B8%AD%E5%9B%BD%E9%A6%99%E6%B8%AF-%3E%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD
 trojan://4f4d1167-ef14-4304-9bce-0740472503ef@90081bb25c.node.tro.cac.cab:45553?allowInsecure=1&sni=ch.01.naiun.bilibili.com#%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD-%3E%F0%9F%87%A8%F0%9F%87%AD_CH_%E7%91%9E%E5%A3%AB
+trojan://telegram-id-privatevpns@35.181.198.31:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#🇫🇷[www.v2nodes.com] trojan-FR-14297593
+trojan://BxceQaOe@18.181.230.17:5408?allowInsecure=1&sni=t.me%252Fripaojiedian#🇯🇵[www.v2nodes.com] trojan-JP-14296682
 trojan://telegram-id-privatevpns@3.121.6.227:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#🇩🇪[www.v2nodes.com] trojan-DE-14294025
 ```
 
-## SS (29 nodes)
+## SS (28 nodes)
 
 ```
-ss://YWVzLTI1Ni1nY206d2MvZXFSUHJZam54ZkFKMkpLbmlvN2NHMktvOUs5RGlNd3pvblJqVTNMST0=@103.130.147.40:1122#%E5%9C%9F%E8%80%B3%E5%85%B6+V2CROSS.COM
 ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#%F0%9F%87%A8%F0%9F%87%A6%20SS-%E5%8A%A0%E6%8B%BF%E5%A4%A7%3E%E8%8B%B1%E5%9B%BD-NF%E8%A7%A3%E9%94%81%E8%8B%B1%E5%9B%BD%E5%9C%B0%E5%8C%BA%E9%9D%9E%E8%87%AA%E5%88%B6%E5%89%A7-ChatGPT-144.217.164.29%3A12000
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ@45.154.204.7:990#%F0%9F%87%A6%F0%9F%87%BF%20SS-%E9%98%BF%E5%A1%9E%E6%8B%9C%E7%96%86-NF%E8%A7%A3%E9%94%81%E5%8A%A0%E6%8B%BF%E5%A4%A7%E5%9C%B0%E5%8C%BA%E9%9D%9E%E8%87%AA%E5%88%B6%E5%89%A7-ChatGPT-TikTok-YouTube-45.154.204.7%3A990
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPRGZ4aW9LMFZrS3hUZHBWUUo0cnY4SGdsQXUwdnp2Ng@146.19.49.251:443#%F0%9F%87%AC%F0%9F%87%A7%20SS-%E8%8B%B1%E5%9B%BD-NF%E8%A7%A3%E9%94%81%E8%87%AA%E5%88%B6%E5%89%A7-ChatGPT-TikTok-146.19.49.251%3A443
@@ -1471,6 +1468,7 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpORFJ5U0lBQkFSYkVyTklWc0NOVmt5WUFIaUJ6aHZlVA@
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo4NjAzOWI3MS1iYTgyLTRjYTgtODM4ZS04NzA4NmFlNjY2ZGU@107.175.87.207:10011#%F0%9F%87%BA%F0%9F%87%B8%20SS-%E7%BE%8E%E5%9B%BD-NF%E8%A7%A3%E9%94%81%E8%87%AA%E5%88%B6%E5%89%A7-ChatGPT-TikTok-YouTube-107.175.87.207%3A10011
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpoYkdycGZ2TnJKc1VtS21QYlIzaVky@tinkered-pennies-puppies.freesocks.work:443#%F0%9F%87%BA%F0%9F%87%B8%20US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpYVU1UeWdFTTFqVllJdnlzWEtxQTVU@hackney-latest-strike.freesocks.work:443#%F0%9F%87%A9%F0%9F%87%AA%20DE%E5%BE%B7%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+ss://YWVzLTI1Ni1nY206d2MvZXFSUHJZam54ZkFKMkpLbmlvN2NHMktvOUs5RGlNd3pvblJqVTNMST0@103.130.147.40:1122#%F0%9F%87%BA%F0%9F%87%B8%20US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp0bmRDUDJEZjktUFR4X0owc1plb0htVGR2a2cwdzRLdg@144.31.7.129:51523#%F0%9F%87%AB%F0%9F%87%AE%20%E8%8A%AC%E5%85%B0%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 ss://YWVzLTI1Ni1nY206MWE4NzAxN2QwYmY1N2YzNA@195.58.48.56:20129#%F0%9F%87%BA%F0%9F%87%B8%20US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 ss://YWVzLTI1Ni1nY206N2UxZGQ0YzU1YmY4NWRhNQ@212.192.15.177:12091#%F0%9F%87%BA%F0%9F%87%B8%20US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
@@ -1485,7 +1483,6 @@ ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA
 ss://YWVzLTI1Ni1nY206ZGFkYTEyMDM=@35.176.239.59:80#🇬🇧[www.v2nodes.com] ss-GB-14293120
 ss://YWVzLTI1Ni1nY206ZGFkYTEyMDM=@3.27.212.11:80#🇦🇺[www.v2nodes.com] ss-AU-14293116
 ss://YWVzLTI1Ni1nY206ZGFkYTEyMDM=@13.135.172.147:80#🇬🇧[www.v2nodes.com] ss-GB-14293115
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZTczMWVjMy1mOGUxLTQzZjYtOTJjZi0zOTc4ZDE0NzA1YzQ@r3mrcg00129437x.cybervena.com:50099#🇹🇼[www.v2nodes.com] ss-TW-14289500
 ```
 
 ## VMESS (359 nodes)
